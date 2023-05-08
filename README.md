@@ -1,4 +1,4 @@
-# diagnosis_code_api
+# expenses_code_api
 Backend Take Home Challenge. This project contains RESTful APIS that allows a user manage their income and expenses. All income and expenses are tied to a user. The API returns responses for SUCCESS, FAILED, NOT FOUND based on your operation.
 
 
@@ -152,9 +152,7 @@ The "refresh" key refers to the refresh token generated on login.
   docker-compose exec web python3 manage.py makemigrations (Make model migrations)
   
   docker-compose exec web python3 manage.py migrate (Migrate models to database)
-  
-  docker-compose exec web python3 manage.py loaddata diagnosis_codes.json (Load initial fixtures of 4678 diagnosis code records)
-  
+    
   docker-compose exec web python3 manage.py test (Run Unit Tests on API Endpoints)
   
   ```
