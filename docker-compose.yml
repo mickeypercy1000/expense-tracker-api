@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python3 /django_expense/manage.py runserver 127.0.0.1:8000 
+    volumes:
+      - .:/django_expense 
+    ports:
+      - 8000:8000 
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: Enigma.100
+      POSTGRES_DB: ExpenseDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes: 
+  postgres_data:
